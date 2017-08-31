@@ -9,16 +9,16 @@ namespace ConnectFour
 
         private int heightGrid;
         private int widthGrid;
-        private List<List<int>> positions;
-
-
-
+        public List<List<int>> positions;
+        public GameLogic gameLogic;
 
         public GameBoard(int height, int width)
         {
             heightGrid = height;
             widthGrid = width;
             positions = GridBuilding();
+            gameLogic = new GameLogic();
+
 
 
         }
@@ -29,18 +29,8 @@ namespace ConnectFour
         }
 
 
-
         private List<List<int>> GridBuilding()
         {
-
-
-            //List.get(x).getCell(y);
-            //List.get(x+1).getCell(y);
-            //List.get(x-1).getCell(y);
-            //List.get(x).getCell(y+1);
-            //Board.getRow(x+1).getCellValue(y+1); 0,1,2
-
-            //List.get(16)
 
             List<List<int>> grid = new List<List<int>>();
             List<int> row = new List<int>();
@@ -49,6 +39,7 @@ namespace ConnectFour
                 row.Clear();
                 for (int y = 0; y < widthGrid; y++)
                 {
+                    
                     row.Add(0);
                 }
                 grid.Add(row);

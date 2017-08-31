@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectFour", "ConnectFour\ConnectFour.csproj", "{DD17DBE9-25D1-466B-93EA-ED77525DB004}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingApplication", "TestingApplication\TestingApplication.csproj", "{4C6B94ED-1D5F-4AF3-A4FB-7914EF8426E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{DD17DBE9-25D1-466B-93EA-ED77525DB004}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD17DBE9-25D1-466B-93EA-ED77525DB004}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD17DBE9-25D1-466B-93EA-ED77525DB004}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C6B94ED-1D5F-4AF3-A4FB-7914EF8426E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C6B94ED-1D5F-4AF3-A4FB-7914EF8426E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C6B94ED-1D5F-4AF3-A4FB-7914EF8426E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C6B94ED-1D5F-4AF3-A4FB-7914EF8426E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
