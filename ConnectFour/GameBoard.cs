@@ -10,14 +10,14 @@ namespace ConnectFour
         private int heightGrid;
         private int widthGrid;
         public List<List<int>> positions;
-        public GameLogic gameLogic;
+        public WinningConditionLogic gameLogic;
 
         public GameBoard(int height, int width)
         {
             heightGrid = height;
             widthGrid = width;
             positions = GridBuilding();
-            gameLogic = new GameLogic();
+            gameLogic = new WinningConditionLogic();
 
 
 

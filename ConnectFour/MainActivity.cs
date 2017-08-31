@@ -33,6 +33,11 @@ namespace ConnectFour
             // Get our button from the layout resource,
             // and attach an event to it
             Button button = FindViewById<Button>(Resource.Id.myButton);
+            TextView textview = FindViewById<TextView>(Resource.Id.two);
+
+            textview.Text = "testing";
+
+
 
             button.Click += delegate { button.Text = $"{count++} clicks!"; };
         }

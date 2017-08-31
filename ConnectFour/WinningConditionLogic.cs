@@ -4,11 +4,11 @@ using System.Collections.Generic;
 namespace ConnectFour
 
 {
-    public class GameLogic
+    public class WinningConditionLogic
     {
         
 
-        public GameLogic()
+        public WinningConditionLogic()
         {
 
         }
@@ -28,6 +28,8 @@ namespace ConnectFour
             return false;
         }
 
+
+        // Checking row is done by checking the entire row from left to right
 		private void CheckRow(int row, List<List<int>> grid)
 		{
             List<int> checkingRow = new List<int>();
