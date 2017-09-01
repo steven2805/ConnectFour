@@ -21,7 +21,7 @@
             <TextView
                 android:text="X"
                 android:padding="3dip"
-                android:id="@+id/ten" />
+                android:id="@+id/text01" />
             <TextView
                 android:text="0"
                 android:padding="3dip"

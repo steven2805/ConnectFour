@@ -61,5 +61,11 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConnectFour\ConnectFour.csproj">
+      <Project>{DD17DBE9-25D1-466B-93EA-ED77525DB004}</Project>
+      <Name>ConnectFour</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

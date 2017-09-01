@@ -6,23 +6,24 @@ namespace ConnectFour
 {
     public class WinningConditionLogic
     {
-        
+
 
         public WinningConditionLogic()
         {
 
         }
 
-        public Boolean ConditionChecker(int[] playerposition,List<List<int>> grid){
-            int row;
+        public Boolean ConditionChecker(List<List<int>> grid)
+        {
 
-            row = playerposition[0];
-            CheckRow(row, grid);
+            CheckRow(grid);
             return false;
         }
 
-        private Boolean AreYouWinning(int score){
-            if(score == 4){
+        private Boolean AreYouWinning(int score)
+        {
+            if (score == 4)
+            {
                 return true;
             }
             return false;
@@ -30,36 +31,29 @@ namespace ConnectFour
 
 
         // Checking row is done by checking the entire row from left to right
-		private void CheckRow(int row, List<List<int>> grid)
-		{
-            List<int> checkingRow = new List<int>();
+        private void CheckRow(List<List<int>> grid){
 
-            checkingRow = grid[row];
-            int playerOneScore = 0;
-            int playerTwoScore = 0;
-            int counter = 0;
-            while (counter < checkingRow.Count){
-                if(checkingRow[counter] == 1){
-                    playerOneScore++;
-                    AreYouWinning(playerOneScore);
-                    counter++;
-                }
-                else if (checkingRow[counter] == 2){
-                    playerTwoScore++;
-                    AreYouWinning(playerTwoScore);
-                    counter++;
-                }
-                else{
-                    playerTwoScore = 0;
-                    playerOneScore = 0;
-                    counter++;
-                }
+			for (int a = 0; a < grid.Count; a++)
+			{
+				Console.WriteLine("value of a: {0}", a);
+                var checking = grid[a];
 
-            }
-		}
+                for (int b = 0; b < grid[0].Count;b++){
+                    if(checking[b] == 0){
+                        Console.WriteLine("testing");
+                    }
+                }
+			}
+
+
+        }
+    
+
+
     }
 
-   
+
+
 }
 
 

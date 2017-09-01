@@ -39,7 +39,7 @@ namespace ConnectFour
                 row.Clear();
                 for (int y = 0; y < widthGrid; y++)
                 {
-                    
+
                     row.Add(0);
                 }
                 grid.Add(row);

@@ -21,9 +21,9 @@ namespace ConnectFour
             game = new GameBoard(10,7);
 
             // This is for testing only !!!!!!!!!!!<<<<>>>><<<>>
-            int[] numbers = new int[2] { 1, 8 };
+
             // this is additional testing
-            game.gameLogic.ConditionChecker(numbers, game.positions);
+            game.gameLogic.ConditionChecker(game.positions);
 
 
             // Set our view from the "main" layout resource

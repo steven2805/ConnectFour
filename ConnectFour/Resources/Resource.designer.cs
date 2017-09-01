@@ -1684,11 +1684,11 @@ namespace ConnectFour
 			// aapt resource value: 0x7f0c0055
 			public const int tableRow3 = 2131492949;
 			
-			// aapt resource value: 0x7f0c0053
-			public const int ten = 2131492947;
-			
 			// aapt resource value: 0x7f0c0060
 			public const int text = 2131492960;
+			
+			// aapt resource value: 0x7f0c0053
+			public const int text01 = 2131492947;
 			
 			// aapt resource value: 0x7f0c005e
 			public const int text2 = 2131492958;
