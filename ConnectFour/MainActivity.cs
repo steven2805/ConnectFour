@@ -42,15 +42,21 @@ namespace ConnectFour
             //TextView textview = FindViewById<TextView>(Resource.Id.two);
             TableLayout tablelayout = FindViewById<TableLayout>(Resource.Id.tableLayout);
 
-            int counter = game.GetHeightGrid() - 1;
-            while(counter >= 0 ){
+            int counter = 0;
+            while(counter <= game.GetHeightGrid() - 1 ){
                 TableRow tbr = new TableRow(this);
                 tbr.Id = counter;
                 tablelayout.AddView(tbr);
-                counter--;
-				System.Diagnostics.Debug.WriteLine(tbr.Id);
-
+                counter++;
+                int widthCounter = 0;
+                while(widthCounter <= game.GetWidthGrid() - 1){
+                    Button btn = new Button(this);
+                    btn.Id = counter + 100;
+                    tbr.AddView(btn);
+                    widthCounter++;
+                }
 			}
+
 
 
 
