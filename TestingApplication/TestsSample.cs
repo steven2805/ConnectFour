@@ -1,5 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
+using ConnectFour;
 
 namespace TestingApplication
 {
@@ -7,13 +8,33 @@ namespace TestingApplication
     [TestFixture]
     public class TestsSample
     {
+        public GameBoard GameBoard { get; set; }
 
         [SetUp]
-        public void Setup() { }
+        public void Setup() {
+            this.GameBoard = new GameBoard(10, 7);
+        }
+
+        //[TearDown]
+        //public void Tear() { }
+
+        [Test]
+        public void TestStuff() {
+            Assert.Equals(GameBoard.ToString(), "GameBoard");
+        }
+
+        [Test]
+        public void TestGridSize(){
+            Assert.AreEqual(this.GameBoard.positions.Count, 10);
+        }
+
+        [Test]
+        public void TestRowSize(){
+            Assert.AreEqual(this.GameBoard.positions[0].Count,7);
+        }
 
 
-        [TearDown]
-        public void Tear() { }
+
 
         [Test]
         public void Pass()

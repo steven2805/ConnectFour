@@ -1676,19 +1676,22 @@ namespace ConnectFour
 			public const int tabMode = 2131492875;
 			
 			// aapt resource value: 0x7f0c0051
-			public const int tableLayout1 = 2131492945;
+			public const int tableLayout = 2131492945;
 			
 			// aapt resource value: 0x7f0c0052
 			public const int tableRow1 = 2131492946;
 			
+			// aapt resource value: 0x7f0c0053
+			public const int tableRow2 = 2131492947;
+			
+			// aapt resource value: 0x7f0c0054
+			public const int tableRow3 = 2131492948;
+			
 			// aapt resource value: 0x7f0c0055
-			public const int tableRow3 = 2131492949;
+			public const int tableRow4 = 2131492949;
 			
 			// aapt resource value: 0x7f0c0060
 			public const int text = 2131492960;
-			
-			// aapt resource value: 0x7f0c0053
-			public const int text01 = 2131492947;
 			
 			// aapt resource value: 0x7f0c005e
 			public const int text2 = 2131492958;
@@ -1707,9 +1710,6 @@ namespace ConnectFour
 			
 			// aapt resource value: 0x7f0c002e
 			public const int topPanel = 2131492910;
-			
-			// aapt resource value: 0x7f0c0054
-			public const int two = 2131492948;
 			
 			// aapt resource value: 0x7f0c0008
 			public const int up = 2131492872;

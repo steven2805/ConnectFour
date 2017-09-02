@@ -23,8 +23,13 @@ namespace ConnectFour
 
         }
 
-        public int GetLengthGrid()
+
+        public int GetWidthGrid()
         {
+            return widthGrid;
+        }
+
+        public int GetHeightGrid(){
             return heightGrid;
         }
 
@@ -33,19 +38,35 @@ namespace ConnectFour
         {
 
             List<List<int>> grid = new List<List<int>>();
-            List<int> row = new List<int>();
+
             for (int x = 0; x < heightGrid; x++)
             {
-                row.Clear();
+                List<int> row = new List<int>();
                 for (int y = 0; y < widthGrid; y++)
                 {
-
                     row.Add(0);
                 }
                 grid.Add(row);
             }
             return grid;
 
+        }
+
+        public void playmove(int column){
+            int counter = 0;
+            while (counter < this.heightGrid)
+            {
+				if (this.positions[counter][column] == 0)
+                    
+                {
+					this.positions[counter][column] = 1;
+					break;
+                }
+                else{
+                    counter++;
+
+                }
+            }
         }
     }
 }

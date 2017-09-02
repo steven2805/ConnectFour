@@ -10,25 +10,19 @@
         android:text="@string/hello" />
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tableLayout1"
-        android:minWidth="250px"
-        android:minHeight="250px">
+        android:layout_height="match_parent"
+        android:id="@+id/tableLayout">
         <TableRow
             android:id="@+id/tableRow1">
         </TableRow>
-        <TableRow>
-            <TextView
-                android:text="X"
-                android:padding="3dip"
-                android:id="@+id/text01" />
-            <TextView
-                android:text="0"
-                android:padding="3dip"
-                android:id="@+id/two" />
+        <TableRow
+            android:id="@+id/tableRow2">
         </TableRow>
         <TableRow
             android:id="@+id/tableRow3">
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow4">
         </TableRow>
     </TableLayout>
 </LinearLayout>

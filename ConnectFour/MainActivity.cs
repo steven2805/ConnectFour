@@ -23,6 +23,12 @@ namespace ConnectFour
             // This is for testing only !!!!!!!!!!!<<<<>>>><<<>>
 
             // this is additional testing
+           
+            game.playmove(0);
+			game.playmove(1);
+            game.playmove(1);
+            game.playmove(2);
+            game.playmove(3);
             game.gameLogic.ConditionChecker(game.positions);
 
 
@@ -33,13 +39,24 @@ namespace ConnectFour
             // Get our button from the layout resource,
             // and attach an event to it
             Button button = FindViewById<Button>(Resource.Id.myButton);
-            TextView textview = FindViewById<TextView>(Resource.Id.two);
+            //TextView textview = FindViewById<TextView>(Resource.Id.two);
+            TableLayout tablelayout = FindViewById<TableLayout>(Resource.Id.tableLayout);
 
-            textview.Text = "testing";
+            int counter = game.GetHeightGrid() - 1;
+            while(counter >= 0 ){
+                TableRow tbr = new TableRow(this);
+                tbr.Id = counter;
+                tablelayout.AddView(tbr);
+                counter--;
+				System.Diagnostics.Debug.WriteLine(tbr.Id);
+
+			}
 
 
 
-            button.Click += delegate { button.Text = $"{count++} clicks!"; };
+
+
+			button.Click += delegate { button.Text = $"{count++} clicks!"; };
         }
     }
 }
