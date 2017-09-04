@@ -18,10 +18,6 @@ namespace TestingApplication
         //[TearDown]
         //public void Tear() { }
 
-        [Test]
-        public void TestStuff() {
-            Assert.Equals(GameBoard.ToString(), "GameBoard");
-        }
 
         [Test]
         public void TestGridSize(){
@@ -33,33 +29,14 @@ namespace TestingApplication
             Assert.AreEqual(this.GameBoard.positions[0].Count,7);
         }
 
-
-
-
         [Test]
-        public void Pass()
-        {
-            Console.WriteLine("test1");
-            Assert.True(true);
-        }
-
-        [Test]
-        public void Fail()
-        {
-            Assert.False(true);
-        }
-
-        [Test]
-        [Ignore("another time")]
-        public void Ignore()
-        {
-            Assert.True(false);
-        }
-
-        [Test]
-        public void Inconclusive()
-        {
-            Assert.Inconclusive("Inconclusive");
+        public void checkWining(){
+			GameBoard.playmove(0);
+			GameBoard.playmove(1);
+			GameBoard.playmove(1);
+			GameBoard.playmove(2);
+			GameBoard.playmove(3);
+            Assert.IsTrue(this.GameBoard.gameLogic.ConditionChecker(this.GameBoard.positions));
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 
 namespace ConnectFour
-{   
+{
     [Activity(Label = "ConnectFour", MainLauncher = true, Icon = "@mipmap/icon")]
     public class MainActivity : Activity
     {
@@ -18,18 +18,24 @@ namespace ConnectFour
         {
             base.OnCreate(savedInstanceState);
             System.Diagnostics.Debug.WriteLine("derp");
-            game = new GameBoard(10,7);
+            game = new GameBoard(8, 5);
 
             // This is for testing only !!!!!!!!!!!<<<<>>>><<<>>
 
             // this is additional testing
-           
+
             game.playmove(0);
-			game.playmove(1);
+            game.playmove(0);
+            game.playmove(0);
+            game.playmove(0);
             game.playmove(1);
-            game.playmove(2);
-            game.playmove(3);
-            game.gameLogic.ConditionChecker(game.positions);
+			game.playmove(1);
+			game.playmove(1);
+			game.playmove(2);
+			game.playmove(2);
+			game.playmove(3);
+          
+			game.gameLogic.ConditionChecker(game.positions);
 
 
             // Set our view from the "main" layout resource
@@ -42,27 +48,39 @@ namespace ConnectFour
             //TextView textview = FindViewById<TextView>(Resource.Id.two);
             TableLayout tablelayout = FindViewById<TableLayout>(Resource.Id.tableLayout);
 
-            int counter = 0;
-            while(counter <= game.GetHeightGrid() - 1 ){
+
+
+
+            int counter = game.GetHeightGrid() - 1;
+            while (counter >= 0)
+            {
                 TableRow tbr = new TableRow(this);
                 tbr.Id = counter;
                 tablelayout.AddView(tbr);
-                counter++;
+
                 int widthCounter = 0;
-                while(widthCounter <= game.GetWidthGrid() - 1){
+                while (widthCounter <= game.GetWidthGrid() - 1)
+                {
                     Button btn = new Button(this);
-                    btn.Id = counter + 100;
+                    string formatter = counter.ToString() + widthCounter.ToString();
+                    btn.Id = widthCounter;
+                    btn.Text = game.positions[counter][widthCounter].ToString();
                     tbr.AddView(btn);
                     widthCounter++;
+                    System.Diagnostics.Debug.WriteLine(btn.Id);
+
                 }
-			}
+                counter--;
+            }
 
 
 
 
 
 
-			button.Click += delegate { button.Text = $"{count++} clicks!"; };
+
+
+            button.Click += delegate { button.Text = $"{count++} clicks!"; };
         }
     }
 }
