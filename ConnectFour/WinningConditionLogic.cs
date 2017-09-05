@@ -15,28 +15,23 @@ namespace ConnectFour
 
         public Boolean ConditionChecker(List<List<int>> grid)
         {
-
-            //int result = CheckRow(grid);
-            int result2 = CheckDiagonalStartingleft(grid);
-            if (result2 < 4)
-            {
-                result2 = CheckingColumn(grid);
-            }
-
-
-            return AreYouWinning(result2);
-
-
-        }
-
-        private Boolean AreYouWinning(int score)
-        {
-            if (score == 4)
-            {
+            int result = CheckRow(grid);
+            if(CheckRow(grid) == 4 ){
                 return true;
             }
-            return false;
+            else if(CheckingColumn(grid) == 4){
+                return true;
+            }
+            else if(CheckDiagonalStartingleft(grid) == 4){
+                return true;
+            }
+            else{
+                return true;
+            }
+
         }
+
+     
 
 
         // Checking row is done by checking the entire row from left to right
@@ -65,7 +60,7 @@ namespace ConnectFour
                         Console.WriteLine("this is dispaying a one position");
 
                     }
-                    else if (checking[b] == 2)
+                    else if (checking[b] == 3)
                     {
                         playerscore++;
                         Console.WriteLine("This is desplaying a two positions");
@@ -95,7 +90,7 @@ namespace ConnectFour
                     {
                         playerScore = 0;
                     }
-                    else
+                    else if(grid[b][checking] == 1)
                     {
                         playerScore++;
                     }
@@ -115,7 +110,7 @@ namespace ConnectFour
                 int counterX = grid[0].Count;
                 int counterY = a;
                 int counter = 0;
-               
+
                 while (counter < grid[0].Count)
                 {
                     if (counterY < 0)
@@ -142,18 +137,65 @@ namespace ConnectFour
                 }
 
             }
+            if (playerScore >= 4)
+            {
+                return playerScore;
+
+            }
+            else
+            {
+
+                int setCounter = grid.Count;
+                int playerScore2 = 0;
+
+
+                for (int a = 0; a < grid[0].Count; a++)
+                {
+                    int columnCounter = a;
+                    int rowCounter = setCounter;
+                    rowCounter--;
+
+                    if (playerScore2 == 4)
+                    {
+                        return playerScore2;
+                    }
+
+                    while (columnCounter < grid[0].Count)
+                    {
 
 
 
-            return playerScore;
-
+                        if (grid[rowCounter][columnCounter] == 1)
+                        {
+                            playerScore2++;
+                            if (playerScore2 == 4)
+                            {
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            playerScore2 = 0;
+                        }
+                        rowCounter--;
+                        columnCounter++;
+                    }
+                }
+                return playerScore2;
+            }
         }
-
-
-
     }
 
 }
+
+
+
+
+
+
+
+
+
 
 
 

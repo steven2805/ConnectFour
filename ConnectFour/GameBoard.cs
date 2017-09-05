@@ -29,7 +29,8 @@ namespace ConnectFour
             return widthGrid;
         }
 
-        public int GetHeightGrid(){
+        public int GetHeightGrid()
+        {
             return heightGrid;
         }
 
@@ -52,17 +53,27 @@ namespace ConnectFour
 
         }
 
-        public void playmove(int column){
+        public void playmove(int column, int player)
+        {
             int counter = 0;
             while (counter < this.heightGrid)
             {
-				if (this.positions[counter][column] == 0)
-                    
+                if (this.positions[counter][column] == 0)
+
                 {
-					this.positions[counter][column] = 1;
-					break;
+                    if (player == 1)
+                    {
+                        this.positions[counter][column] = 1;
+                        break;
+                    }
+                    else
+                    {
+                        this.positions[counter][column] = 2;
+                        break;
+                    }
                 }
-                else{
+                else
+                {
                     counter++;
 
                 }

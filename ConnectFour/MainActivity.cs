@@ -9,7 +9,6 @@ namespace ConnectFour
     [Activity(Label = "ConnectFour", MainLauncher = true, Icon = "@mipmap/icon")]
     public class MainActivity : Activity
     {
-        int count = 1;
         GameBoard game;
 
 
@@ -18,22 +17,29 @@ namespace ConnectFour
         {
             base.OnCreate(savedInstanceState);
             System.Diagnostics.Debug.WriteLine("derp");
-            game = new GameBoard(8, 5);
+            game = new GameBoard(10, 10);
 
-            // This is for testing only !!!!!!!!!!!<<<<>>>><<<>>
+			// This is for testing only !!!!!!!!!!!<<<<>>>><<<>>
 
-            // this is additional testing
-
-            game.playmove(0);
-            game.playmove(0);
-            game.playmove(0);
-            game.playmove(0);
-            game.playmove(1);
-			game.playmove(1);
-			game.playmove(1);
-			game.playmove(2);
-			game.playmove(2);
-			game.playmove(3);
+			// this is additional testing
+			game.playmove(5,2);
+			game.playmove(5,2);
+			game.playmove(5,2);
+            game.playmove(5,2);
+            game.playmove(5,2);
+            game.playmove(5,1);
+			game.playmove(6,2);
+			game.playmove(6,2);
+            game.playmove(6,2);
+			game.playmove(6,2);
+			game.playmove(6,1);
+			game.playmove(7,2);
+			game.playmove(7,2);
+			game.playmove(7,2);
+			game.playmove(7,1);
+			game.playmove(8,2);
+            game.playmove(8,2);
+            game.playmove(8,1);
           
 			game.gameLogic.ConditionChecker(game.positions);
 
@@ -73,15 +79,16 @@ namespace ConnectFour
                 counter--;
             }
 
+           
 
 
 
 
 
 
-
-            button.Click += delegate { button.Text = $"{count++} clicks!"; };
+            button.Click += delegate { System.Diagnostics.Debug.WriteLine("derp"); };
         }
+
     }
 }
 
