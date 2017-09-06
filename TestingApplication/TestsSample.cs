@@ -15,10 +15,6 @@ namespace TestingApplication
             this.GameBoard = new GameBoard(10, 10);
         }
 
-        //[TearDown]
-        //public void Tear() { }
-
-
         [Test]
         public void TestGridSize(){
             Assert.AreEqual(this.GameBoard.positions.Count, 10);
@@ -42,9 +38,9 @@ namespace TestingApplication
         [Test]
         public void checkingDiagonalWinner(){
 			GameBoard.playmove(5, 2);
+			GameBoard.playmove(5, 1);
 			GameBoard.playmove(5, 2);
-			GameBoard.playmove(5, 2);
-			GameBoard.playmove(5, 2);
+			GameBoard.playmove(5, 1);
 			GameBoard.playmove(5, 2);
 			GameBoard.playmove(5, 1);
 			GameBoard.playmove(6, 2);
@@ -53,7 +49,7 @@ namespace TestingApplication
 			GameBoard.playmove(6, 2);
 			GameBoard.playmove(6, 1);
 			GameBoard.playmove(7, 2);
-			GameBoard.playmove(7, 2);
+			GameBoard.playmove(7, 1);
 			GameBoard.playmove(7, 2);
 			GameBoard.playmove(7, 1);
 			GameBoard.playmove(8, 2);

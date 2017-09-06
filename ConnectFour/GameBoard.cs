@@ -19,8 +19,6 @@ namespace ConnectFour
             positions = GridBuilding();
             gameLogic = new WinningConditionLogic();
 
-
-
         }
 
 

@@ -9,6 +9,7 @@ namespace ConnectFour
     [Activity(Label = "ConnectFour", MainLauncher = true, Icon = "@mipmap/icon")]
     public class MainActivity : Activity
     {
+       
         GameBoard game;
 
 
@@ -17,29 +18,19 @@ namespace ConnectFour
         {
             base.OnCreate(savedInstanceState);
             System.Diagnostics.Debug.WriteLine("derp");
-            game = new GameBoard(10, 10);
+            game = new GameBoard(7, 7);
 
-			// This is for testing only !!!!!!!!!!!<<<<>>>><<<>>
+            // This is for testing only !!!!!!!!!!!<<<<>>>><<<>>
 
-			// this is additional testing
-			game.playmove(5,2);
-			game.playmove(5,2);
-			game.playmove(5,2);
-            game.playmove(5,2);
-            game.playmove(5,2);
-            game.playmove(5,1);
-			game.playmove(6,2);
-			game.playmove(6,2);
-            game.playmove(6,2);
-			game.playmove(6,2);
-			game.playmove(6,1);
-			game.playmove(7,2);
-			game.playmove(7,2);
-			game.playmove(7,2);
-			game.playmove(7,1);
-			game.playmove(8,2);
-            game.playmove(8,2);
-            game.playmove(8,1);
+            // this is additional testing
+            game.playmove(2, 2);
+            game.playmove(3, 1);
+            game.playmove(3,2);
+
+         
+		
+		
+     
           
 			game.gameLogic.ConditionChecker(game.positions);
 

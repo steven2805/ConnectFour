@@ -51,19 +51,15 @@ namespace ConnectFour
                     if (checking[b] == 0)
                     {
                         playerscore = 0;
-                        Console.WriteLine("testing");
                     }
                     else if (checking[b] == 1)
                     {
                         playerscore++;
 
-                        Console.WriteLine("this is dispaying a one position");
-
                     }
                     else if (checking[b] == 3)
                     {
                         playerscore++;
-                        Console.WriteLine("This is desplaying a two positions");
                     }
                 }
             }
@@ -155,6 +151,8 @@ namespace ConnectFour
                     int rowCounter = setCounter;
                     rowCounter--;
 
+                   
+
                     if (playerScore2 == 4)
                     {
                         return playerScore2;
@@ -184,6 +182,9 @@ namespace ConnectFour
                 return playerScore2;
             }
         }
+
+
+
     }
 
 }
